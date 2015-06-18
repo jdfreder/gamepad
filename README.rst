@@ -37,4 +37,4 @@ or for a development install:
 Usage
 -----
 
-See example notebook.
+See the `example notebook <https://github.com/SylvainCorlay/gamepad/blob/master/examples/demo.ipynb>`_.
