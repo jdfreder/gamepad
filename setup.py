@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name='gamepad',
-    version='0.1',
+    version='0.1.1',
     description='Gamepad and Joystick support for the Jupyter notebook.',
     author='Sylvain Corlay',
     author_email='sylvain.corlay@gmail.com',
