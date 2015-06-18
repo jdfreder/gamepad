@@ -15,7 +15,7 @@ Installation
 
     pip install gamepad
 
-of for a development install:
+or for a development install:
 
 .. code-block:: python
 
