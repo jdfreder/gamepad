@@ -26,7 +26,7 @@ define([
                 })
                 .appendTo(this.$support);
             this.$label = $('<div />')
-                .text(this.model.get('index'))
+                .text(this.model.get('description'))
                 .css('text-align', 'center')
                 .appendTo(this.$el);
             this.update();
@@ -65,7 +65,7 @@ define([
                 })
                 .appendTo(this.$support);
             this.$label = $('<div />')
-                .text(this.model.get('index'))
+                .text(this.model.get('description'))
                 .css('text-align', 'center')
                 .appendTo(this.$el);
             this.update();
@@ -196,7 +196,7 @@ define([
                  widget_class: 'gamepad.gamepad.Button',
             }).then(function(model) {
                  return model.request_state().then(function() {
-                     model.set('index', index);
+                     model.set('description', index);
                      return model;
                  });
             });
@@ -210,7 +210,7 @@ define([
                  widget_class: 'gamepad.gamepad.Axis',
             }).then(function(model) {
                  return model.request_state().then(function() {
-                     model.set('index', index);
+                     model.set('description', index);
                      return model;
                  });
             });
