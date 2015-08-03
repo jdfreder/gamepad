@@ -1,12 +1,13 @@
 try:  # IPython/Jupyter 4.x
-    from ipywidgets import Widget, widget_serialization
+    from ipywidgets import Widget, register, widget_serialization
     from traitlets import Bool, Int, Float, Unicode, List, Instance
 except ImportError:  # IPython 3.x
-    from IPython.html.widgets import Widget
+    from IPython.html.widgets import Widget, register
     from IPython.utils.traitlets import Bool, Int, Float, Unicode, List, Instance
     widget_serialization = {}
 
 
+@register('Gamepad.Button')
 class Button(Widget):
     """Represents a gamepad or joystick button"""
     value = Float(min=0.0, max=1.0, read_only=True, sync=True)
@@ -16,6 +17,7 @@ class Button(Widget):
     _view_module = Unicode('nbextensions/gamepad/gamepad', sync=True)
 
 
+@register('Gamepad.Axis')
 class Axis(Widget):
     """Represents a gamepad or joystick axis"""
     value = Float(min=-1.0, max=1.0, read_only=True, sync=True)
@@ -24,6 +26,7 @@ class Axis(Widget):
     _view_module = Unicode('nbextensions/gamepad/gamepad', sync=True)
 
 
+@register('Gamepad.Gamepad')
 class Gamepad(Widget):
     """Represents a game controller"""
     index = Int(sync=True)
