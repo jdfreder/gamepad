@@ -1,6 +1,8 @@
 Gamepad and joystick support for the Jupyter notebook
 =====================================================
 
+**This project has been adopted into ipython/ipywidgets (see https://github.com/ipython/ipywidgets/pull/123).**
+
 License
 -------
 
